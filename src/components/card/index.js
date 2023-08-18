@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
-import emoji from "./assets/thinking-emoji.png";
-import "./styles.scss";
+// @vendors
 import cn from "classnames";
+// assets
+import emoji from "../../assets/thinking-emoji.png";
+// styles
+import "./styles.scss";
 
-const Card = ({ id, src, alt, beenGuessed, onClick }) => {
-	const [showFront, setShowFront] = useState(true);
-
-	useEffect(() => {
-		console.log(
-			"🚀 ~ file: index.js:12 ~ useEffect ~ beenGuessed:",
-			beenGuessed
-		);
-		if (beenGuessed) setShowFront(false);
-	}, [beenGuessed]);
-
+const Card = ({ id, src, alt, onClick, showFront }) => {
 	const handleSelfClick = () => {
-		if (!beenGuessed && !showFront) setShowFront(true);
-		else {
-			setShowFront(!showFront);
-			onClick();
-		}
+		onClick();
 	};
 
 	let cardClass = cn(
-		"card_container sm:h-30 relative m-2 flex h-40 cursor-pointer overflow-hidden rounded-md border-4 border-nord-8 shadow-md"
+		"card_container sm:h-30 relative m-2 flex h-40 cursor-pointer overflow-hidden rounded-md border-4 border-nord-8 shadow-md",
+		{
+			"border-nord-15": !showFront,
+		}
 	);
 
 	let innerCardClass = cn(

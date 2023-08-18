@@ -5,31 +5,30 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-  min-height: 100vh;
-  background-color: #2e3440;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  color: #e5e9f0;
-  padding: 0.5rem;
+	height: 100vh;
+	background-color: #2e3440;
+	flex-direction: column;
+	font-size: 1rem;
+	color: #e5e9f0;
+	padding: 0.5rem;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 h1,
@@ -38,7 +37,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 label,
@@ -48,10 +47,10 @@ summary,
 [type="radio"],
 [type="submit"],
 [type="checkbox"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
