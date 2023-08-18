@@ -4,7 +4,7 @@ Welcome to the Concentration / Memory Game! Ready to have some good old fun? Tes
 ![Game Preview]()
 
 ## How to Play
-1. Open your web browser and visit the following URL: [Concentration Game](https://ferlu-memory-game.netlify.app/) No need to install anything!
+1. Open your web browser and visit [the following URL](https://ferlu-memory-game.netlify.app/). No need to install anything!
 2. Enter your name to start playing.
 3. The game will start automatically. Click on the cards to reveal them.
 3. Try to find matching pairs by remembering the positions of the cards.
