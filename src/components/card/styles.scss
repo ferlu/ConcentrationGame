@@ -1,0 +1,24 @@
+.card {
+	backface-visibility: hidden;
+
+	&_container {
+		&__inner {
+			transform-style: preserve-3d;
+			transition: 0.5s linear 0.1s;
+
+			&--front {
+				transform: rotateY(180deg);
+			}
+			&--back {
+				transform: rotateY(180deg);
+			}
+		}
+	}
+	&--front {
+		transform: rotateY(180deg);
+	}
+
+	&--back {
+		transform: rotateY(0);
+	}
+}
