@@ -53,16 +53,7 @@ function App() {
 						</div>
 					</div>
 				) : (
-					<>
-						<h1>
-							Welcome,{" "}
-							<span className='bg-gradient-to-b from-nord-10 to-nord-15 bg-clip-text text-nord-7 text-transparent'>
-								{username}
-							</span>
-							!
-						</h1>
-						<Board />
-					</>
+					<Board username={username} />
 				)}
 			</header>
 		</div>

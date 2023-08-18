@@ -13,7 +13,7 @@ const Card = ({ id, src, alt, onClick, showFront }) => {
 	let cardClass = cn(
 		"card_container sm:h-30 relative m-2 flex h-40 cursor-pointer overflow-hidden rounded-md border-4 border-nord-8 shadow-md",
 		{
-			"border-nord-15": !showFront,
+			"border-nord-15": showFront,
 		}
 	);
 
