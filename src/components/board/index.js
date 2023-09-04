@@ -111,7 +111,7 @@ const Board = ({ username, rightGuess, wrongGuess }) => {
 					/>
 				</div>
 			) : images ? (
-				<div className='board my-14 grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-[10] md:grid-cols-5 md:grid-rows-[8] lg:grid-cols-8 lg:grid-rows-5 xl:grid-cols-10 max-xl:grid-rows-4 gap-1'>
+				<div className='board pt-12 grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-[10] md:grid-cols-5 md:grid-rows-[8] lg:grid-cols-8 lg:grid-rows-5 gap-1'>
 					{imagesComponent()}
 				</div>
 			) : (
