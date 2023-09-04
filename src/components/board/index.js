@@ -9,11 +9,9 @@ import { fetchImages } from "../../constants";
 import winAnimation from "../../assets/celebration.json";
 import loadingAnimation from "../../assets/loading.json";
 
-const Board = ({ username }) => {
+const Board = ({ username, rightGuess, wrongGuess }) => {
 	const [images, setImages] = useState();
 	const [clickedCards, setClickedCards] = useState([]);
-	const [rightGuess, setRightGuess] = useState(0);
-	const [wrongGuess, setWrongGuess] = useState(0);
 	const [guessedCards, setGuessedCards] = useState([]);
 	const [completedGame, setCompletedGame] = useState(false);
 
@@ -37,16 +35,17 @@ const Board = ({ username }) => {
 				let ids = clickedCards.map((card) => card.imageId);
 				if (ids[0] === ids[1]) {
 					if (!guessedCards.includes(ids[0])) {
-						setRightGuess((prevVal) => prevVal + 1);
+						rightGuess((prevVal) => prevVal + 1);
 						setGuessedCards((prev) => {
 							let newGuesses = [...prev, ids[0]];
 							return newGuesses;
 						});
 					}
 				} else {
-					setWrongGuess((prevVal) => prevVal + 1);
+					wrongGuess((prevVal) => prevVal + 1);
 				}
 			}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [clickedCards, guessedCards, completedGame]);
 
 	const handleCardClick = (data) => {
@@ -102,34 +101,19 @@ const Board = ({ username }) => {
 	};
 
 	return (
-		<div className='board-wrapper'>
+		<div className='board-wrapper p-10'>
 			{completedGame ? (
-				<>
-					<h2 className='my-10 text-5xl'>
-						Congrats, {localStorage.getItem("username")}!
-					</h2>
+				<div>
+					<h2 className='my-10 text-5xl'>Congrats, {username}!</h2>
 					<Lottie
 						animationData={winAnimation}
 						loop={true}
 					/>
-				</>
+				</div>
 			) : images ? (
-				<>
-					<h1>
-						Welcome,{" "}
-						<span className='bg-gradient-to-b from-nord-10 to-nord-15 bg-clip-text text-nord-7 text-transparent'>
-							{username}
-						</span>
-						!
-					</h1>
-					<div className='flex justify-center'>
-						<h2 className='mx-8'>Right Guesses: {rightGuess} </h2>
-						<h2 className='mx-8'>Wrong Guesses: {wrongGuess}</h2>
-					</div>
-					<div className='board grid-rows-20 sm:grid-rows-10 md:grid-rows-8 mt-4 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-10 lg:grid-rows-4'>
-						{imagesComponent()}
-					</div>
-				</>
+				<div className='board my-14 grid grid-cols-2 sm:grid-cols-4 sm:grid-rows-[10] md:grid-cols-5 md:grid-rows-[8] lg:grid-cols-8 lg:grid-rows-5 xl:grid-cols-10 max-xl:grid-rows-4 gap-1'>
+					{imagesComponent()}
+				</div>
 			) : (
 				loadingImg()
 			)}

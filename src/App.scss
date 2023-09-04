@@ -1,12 +1,16 @@
 button {
-  background-color: #5e81ac;
-  padding: 0.5rem 1rem;
-  margin: 0 1rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
+	background-color: #5e81ac;
+	padding: 0.5rem 1rem;
+	margin: 0 1rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease-in-out;
 
-  &:hover {
-    background-color: #4c566a;
-  }
+	&:hover {
+		background-color: #4c566a;
+	}
+}
+
+.app {
+	height: 100vh;
 }

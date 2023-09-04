@@ -11,14 +11,14 @@ const Card = ({ id, src, alt, onClick, showFront }) => {
 	};
 
 	let cardClass = cn(
-		"card_container sm:h-30 relative m-2 flex h-40 cursor-pointer overflow-hidden rounded-md border-4 border-nord-8 shadow-md",
+		"card_container relative flex rounded-3xl cursor-pointer overflow-hidden shadow-lg border-white border-4 bg-slate-800 border-nord-14 w-32 h-40",
 		{
 			"border-nord-15": showFront,
 		}
 	);
 
 	let innerCardClass = cn(
-		"card_container__inner relative flex hover:bg-nord-3",
+		"card_container__inner relative rounded-3xl flex hover:bg-nord-3 w-32 h-40",
 		{
 			"card_container__inner--front": showFront,
 		}
@@ -41,7 +41,7 @@ const Card = ({ id, src, alt, onClick, showFront }) => {
 					<img
 						src={src}
 						alt={alt}
-						className='h-full w-full object-cover'
+						className='h-full w-full object-cover rounded-lg'
 					/>
 				</div>
 			</div>
