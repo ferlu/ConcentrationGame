@@ -5,7 +5,7 @@ import emoji from "../../assets/thinking-emoji.png";
 // styles
 import "./styles.scss";
 
-const Card = ({ id, src, alt, onClick, showFront }) => {
+const Card = ({ id, src, alt, onClick, showFront, wasGuessed }) => {
 	const handleSelfClick = () => {
 		onClick();
 	};
@@ -14,6 +14,7 @@ const Card = ({ id, src, alt, onClick, showFront }) => {
 		"card_container relative flex rounded-3xl cursor-pointer overflow-hidden shadow-lg border-white border-4 bg-slate-800 border-nord-14 w-32 h-40",
 		{
 			"border-nord-15": showFront,
+			"pointer-events-none": wasGuessed,
 		}
 	);
 

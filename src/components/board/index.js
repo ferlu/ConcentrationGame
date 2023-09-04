@@ -82,6 +82,7 @@ const Board = ({ username, rightGuess, wrongGuess }) => {
 						!guessedCards.includes(data.imageId) &&
 						!clickedCards.map((card) => card.id).includes(data.id)
 					}
+					wasGuessed={guessedCards.includes(data.imageId)}
 					onClick={() => handleCardClick(data)}
 				/>
 			);
