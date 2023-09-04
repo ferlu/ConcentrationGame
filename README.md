@@ -1,7 +1,8 @@
 # Concentration / Memory Game
 Welcome to the Concentration / Memory Game! Ready to have some good old fun? Test your memory and concentration skills by matching all the cards in this engaging and entertaining game.
 
-![Game Preview](https://github.com/ferlu/concentration-game/assets/24488600/a05eb14c-2364-42db-bf78-93b2046e087d)
+![Screenshot 2023-09-03 at 19-46-02 Concentration Game](https://github.com/ferlu/concentration-game/assets/24488600/19ffecb4-74a6-4701-a48e-68c4981c6b94)
+
 
 ## How to Play
 1. Open your web browser and visit [the following URL](https://ferlu-memory-game.netlify.app/). No need to install anything!
