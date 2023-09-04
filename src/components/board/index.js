@@ -45,8 +45,7 @@ const Board = ({ username, rightGuess, wrongGuess }) => {
 					wrongGuess((prevVal) => prevVal + 1);
 				}
 			}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [clickedCards, guessedCards, completedGame]);
+	}, [clickedCards, guessedCards, completedGame, rightGuess, wrongGuess]);
 
 	const handleCardClick = (data) => {
 		if (clickedCards.length === 2) setClickedCards([]);
